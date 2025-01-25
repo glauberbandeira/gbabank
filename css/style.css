@@ -1,0 +1,266 @@
+/* Reset de CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #212121; /* Preto Suave */
+  }
+  
+  /* Links padrão */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Imagens responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    max-width: 1400px; /* Mesma largura definida no header */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Adiciona espaçamento lateral */
+  }
+  
+
+/* Cabeçalho */
+.header {
+    background-color: #FFFFFF;
+    padding: 40px 40px; /* Aumentado o padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .header .container {
+    max-width: 1190px; /* Aumentado o tamanho do container */
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    font-size: 26px; /* Peso maior */
+    font-weight: 800; /* Peso aumentado */
+    color: #007BFF;
+    margin: 0;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .nav .menu {
+    display: flex;
+    gap: 20px;
+  }
+
+  /* Links */
+.nav .menu li a {
+    font-size: 16px;
+    font-weight: 600; /* Peso médio para destaque */
+    color: #212121;
+    text-decoration: none;
+  }
+  
+  .nav .menu li a:hover {
+    color: #0056B3; /* Azul escuro no hover */
+  }
+  
+  .nav .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    margin-left: auto; /* Posiciona na extremidade direita */
+  }
+  
+  .nav .hamburger span {
+    display: block;
+    width: 30px; /* Aumentado o tamanho do ícone */
+    height: 4px; /* Aumentado a espessura */
+    background-color: #007BFF;
+    transition: all 0.3s ease;
+  }  
+  /* Botões */
+  .actions .btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions .btn-login {
+  background-color: transparent; /* Fundo transparente */
+  color: #007BFF; /* Azul padrão */
+  font-weight: bold; /* Peso do texto ajustado */
+  font-size: 16px; /* Tamanho da fonte ajustado */
+  padding: 10px 20px; /* Espaçamento interno ajustado */
+  border: none; /* Sem borda */
+  border-radius: 0; /* Sem bordas arredondadas */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Transição suave para cor */
+  }
+  
+  .actions .btn-login:hover {
+    color: #0056B3;
+  }
+  
+  .actions .btn-signup {
+    background-color: #007BFF; /* Fundo sólido azul */
+    color: #FFFFFF; /* Texto branco */
+    font-weight: bold; /* Peso do texto ajustado */
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    padding: 15px 40px; /* Espaçamento interno ajustado */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave para fundo */
+  
+  }
+  
+  .actions .btn-signup:hover {
+    background-color: #0056B3;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1170px) {
+    .nav .menu {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .nav .menu {
+      display: none;
+      position: absolute;
+      gap: 40px; /* Aumenta o espaçamento entre os itens */
+      top: 100px; /* Aumentado o espaçamento para evitar sobreposição com a logo */
+      left: 50%; /* Centraliza horizontalmente */
+      transform: translateX(-50%); /* Ajusta a centralização */
+      width: 100%; /* Define uma largura proporcional para melhor visualização */
+      flex-direction: column;
+      align-items: center; /* Centraliza os itens no menu mobile */
+      background: #FFFFFF;
+      padding: 30px 20px; /* Ajusta o espaçamento interno */
+      border-radius: 0 0 5px 5px; /* Bordas arredondadas apenas no topo */
+    }
+
+    .nav .menu li a {
+        font-size: 25px; /* Aumenta o tamanho da fonte nos links */
+        text-align: center; /* Centraliza o texto */
+      }
+  
+    .nav .menu.active {
+      display: flex;
+      
+    }
+    .nav .hamburger {
+      display: flex;
+    }
+  
+    .actions {
+      display: none;
+    }
+
+    .nav .menu li {
+        margin: 10px 0; /* Adiciona espaçamento vertical entre os links */
+    }
+  }
+
+/* ----------------------------- */
+/* Seção Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background-color: #F9FAFB; /* Fundo leve */
+  }
+  
+  .hero .container {
+    max-width: 1190px; /* Aumentado o tamanho do container */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #212121;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    color: #6C757D;
+    margin-bottom: 30px;
+  }
+  
+  .hero-actions .btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-actions .btn-primary {
+    background-color: #007BFF;
+    color: #FFFFFF;
+    border: none;
+  }
+  
+  .hero-actions .btn-primary:hover {
+    background-color: #0056B3;
+  }
+  
+  .hero-actions .btn-secondary {
+    background-color: transparent;
+    color: #007BFF;
+    border: 2px solid #007BFF;
+    margin-left: 10px;
+  }
+  
+  .hero-actions .btn-secondary:hover {
+    background-color: #E6F2FF;
+  }
+  
+  .hero-image img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
